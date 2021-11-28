@@ -1,0 +1,28 @@
+<p>signup works!</p>
+
+<div>
+    <form >
+        <div>
+            <label for="name">userName</label><br>
+            <input type="text" name="text" [(ngModel)]="isRegisters.userName" [ngModelOptions]="{standalone: true}">
+        </div>
+         <div>
+            <label for="email">Email</label><br>
+            <input type="email" name="text" [(ngModel)]="isRegisters.Email" [ngModelOptions]="{standalone: true}">
+        </div>
+         <div>
+            <label for="pass">Password</label><br>
+            <input type="password" name="pass" [(ngModel)]="isRegisters.Password" [ngModelOptions]="{standalone: true}">
+        </div> <br>
+           <div>
+            <label for="usertype">UserType</label><br>
+            <input type="text" name="usertype" [(ngModel)]="isRegisters.usertype" [ngModelOptions]="{standalone: true}">
+        </div> <br>
+         <div>
+          <button type="submit" (click)="add()">Save</button>
+          <button type="reset"> Reset</button>
+          <button [routerLink]="['/login']">Back to login</button>
+        </div>
+
+    </form>
+</div>

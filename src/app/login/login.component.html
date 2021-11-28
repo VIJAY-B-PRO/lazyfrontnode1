@@ -1,0 +1,28 @@
+<p>login works!</p>
+
+
+<div class="container">
+
+  <form>
+    <div class="form-email">
+      <label for="email">Email</label>
+      <input type="text" name="email"  [(ngModel)]="isLogins.Email"><br>
+
+    </div>
+    <div  class="form-pass">
+      <label for="pass">Password</label>
+      <input type="password" name="pass"  [(ngModel)]="isLogins.Password"><br>
+
+    </div>
+    <div class="form-button">
+          <button type="submit" (click) = "login()">login</button>
+    </div>
+
+
+  </form>
+
+    <button>
+        <a [routerLink]="['/signup']">SignUp</a>
+    </button>
+
+</div>

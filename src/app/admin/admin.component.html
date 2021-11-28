@@ -1,0 +1,25 @@
+<p>admin works!</p>
+
+<button (click)="alldata()">show all data</button>
+
+<!----------------------------------------------------- Admin page-------------------------------------------  -->
+
+
+<table *ngIf="isData" border="1">
+    <tr >
+        <th>Id</th>              
+        <th>userName</th>
+        <th>email</th>
+        <th>usertype</th>
+    </tr>
+    <tr *ngFor="let detail of alldetail" >
+        <td>{{detail.id}}</td>
+        <td>{{detail.userName}}</td>
+        <td>{{detail.Email}}</td>
+        <td>{{detail.usertype}}</td>
+        <td><button (click)="edit(detail.id)">Edit</button></td>
+        <td><button (click)="delete(detail.id)">Delete</button></td>
+
+    </tr>
+    
+</table>
